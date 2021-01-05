@@ -1,5 +1,5 @@
 # action.yml
-name: 'First time'
+name: 'First time to use Github action'
 description: 'Just test if it works'
 inputs:
   who-to-greet:  # id of input
