@@ -1,5 +1,8 @@
 # Container image that runs your code
-FROM alpine:3.10
+FROM python:3
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh

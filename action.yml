@@ -1,16 +1,13 @@
 # action.yml
-name: 'First time to use Github action'
+name: 'Typo checking'
 description: 'Just test if it works'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  list-files:
+    description: 'List of changed file'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.list-files }}
